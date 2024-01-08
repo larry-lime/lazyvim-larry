@@ -10,3 +10,5 @@ local jump_opt = { noremap = false, silent = true }
 -- Select all
 keymap("n", "<leader>A", "GVgg", opts)
 keymap("n", "<leader>oa", ":%bd! | e# |bd#<CR>", opts)
+keymap("n", "<C-x>", ":q<CR>", opts)
+-- keymap("n", "<C-x>", ":bd!<CR>", opts)

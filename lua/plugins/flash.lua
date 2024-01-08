@@ -1,6 +1,6 @@
 return {
   "folke/flash.nvim",
   keys = {
-    { "s", false },
+    { "s", mode = { "n", "x", "o" }, false },
   },
 }

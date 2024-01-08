@@ -14,20 +14,32 @@ return {
     local luasnip = require("luasnip")
     local cmp = require("cmp")
 
+    opts.preselect = cmp.PreselectMode.None
     opts.window = {
       completion = cmp.config.window.bordered(),
       documentation = cmp.config.window.bordered(),
     }
-    opts.mapping = vim.tbl_extend("force", opts.mapping, {
+
+    opts.mapping = {
+      ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+      ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ["<M-CR>"] = function(fallback)
+        cmp.abort()
+        fallback()
+      end,
+      ["<C-y>"] = cmp.config.disable,
+      ["<C-e>"] = cmp.mapping({
+        i = cmp.mapping.abort(),
+        c = cmp.mapping.close(),
+      }),
+      ["<C-s>"] = cmp.mapping.complete({
+        config = {
+          sources = { { name = "luasnip" } },
+        },
+      }),
       ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_next_item()
-          -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
-          -- this way you will only jump inside the snippet region
-        elseif luasnip.expand_or_jumpable() then
-          luasnip.expand_or_jump()
-        elseif has_words_before() then
-          cmp.complete()
         else
           fallback()
         end
@@ -41,6 +53,16 @@ return {
           fallback()
         end
       end, { "i", "s" }),
-    })
+      ["<C-n>"] = cmp.mapping(function()
+        if luasnip.jumpable(1) then
+          luasnip.jump(1)
+        end
+      end),
+      ["<C-p>"] = cmp.mapping(function()
+        if luasnip.jumpable(-1) then
+          luasnip.jump(-1)
+        end
+      end),
+    }
   end,
 }

@@ -11,4 +11,7 @@ local jump_opt = { noremap = false, silent = true }
 keymap("n", "<leader>A", "GVgg", opts)
 keymap("n", "<leader>oa", ":%bd! | e# |bd#<CR>", opts)
 keymap("n", "<C-x>", ":q<CR>", opts)
+keymap("n", "<leader>ce", ":Copilot enable<CR>", opts)
+keymap("n", "<leader>cd", ":Copilot disable<CR>", opts)
+
 -- keymap("n", "<C-x>", ":bd!<CR>", opts)

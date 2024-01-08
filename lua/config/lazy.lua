@@ -28,8 +28,8 @@ require("lazy").setup({
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
-  changedetection = {
-    enabled = false,
+  change_detection = {
+    enabled = true,
     notify = false, -- get a notification when changes are found
   },
   performance = {

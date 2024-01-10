@@ -1,6 +1,9 @@
+local leet_arg = "leetcode.nvim"
+
 return {
   "kawre/leetcode.nvim",
   build = ":TSUpdate html",
+  lazy = leet_arg ~= vim.fn.argv()[1],
   dependencies = {
     "nvim-telescope/telescope.nvim",
     "nvim-lua/plenary.nvim", -- required by telescope
@@ -13,7 +16,7 @@ return {
   },
   opts = {
     ---@type string
-    arg = "leetcode.nvim",
+    arg = leet_arg,
 
     ---@type lc.lang
     lang = "rust",
@@ -30,7 +33,18 @@ return {
     ---@type boolean
     logging = true,
 
-    injector = {}, ---@type table<lc.lang, lc.inject>
+    injector = {
+      ["cpp"] = {
+        before = { "#include <bits/stdc++.h>", "using namespace std;" },
+        after = "int main() {}",
+      },
+      ["java"] = {
+        before = "import java.util.*;",
+      },
+      ["python3"] = {
+        before = "from typing import List",
+      },
+    }, ---@type table<lc.lang, lc.inject>
 
     cache = {
       update_interval = 60 * 60 * 24 * 7, ---@type integer 7 days
@@ -84,6 +98,6 @@ return {
     },
 
     ---@type boolean
-    image_support = false, -- setting this to `true` will disable question description wrap
+    image_support = true, -- setting this to `true` will disable question description wrap
   },
 }

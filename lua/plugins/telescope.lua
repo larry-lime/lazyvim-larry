@@ -15,6 +15,19 @@ return {
           ["<C-p>"] = require("telescope.actions").preview_scrolling_up,
         },
       },
+      pickers = {
+        spell_suggest = {
+          layout_strategy = "cursor",
+          layout_config = {
+            width = 0.2,
+            height = 0.3,
+          },
+        },
+        find_files = {
+          hidden = true,
+          no_ignore = false,
+        },
+      },
     },
   },
 }

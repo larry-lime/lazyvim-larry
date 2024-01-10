@@ -21,6 +21,8 @@ return {
         cmp.abort()
         fallback()
       end,
+      ["<C-k>"] = cmp.mapping.scroll_docs(-4),
+      ["<C-j>"] = cmp.mapping.scroll_docs(4),
       ["<C-y>"] = cmp.config.disable,
       ["<C-e>"] = cmp.mapping({
         i = cmp.mapping.abort(),
@@ -49,16 +51,6 @@ return {
           fallback()
         end
       end, { "i", "s" }),
-      ["<C-n>"] = cmp.mapping(function()
-        if luasnip.jumpable(1) then
-          luasnip.jump(1)
-        end
-      end),
-      ["<C-p>"] = cmp.mapping(function()
-        if luasnip.jumpable(-1) then
-          luasnip.jump(-1)
-        end
-      end),
     }
   end,
 }

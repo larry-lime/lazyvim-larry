@@ -16,10 +16,6 @@ return {
       end,
       mode = { "n", "x", "o" },
     },
-    --     vim.keymap.set({ "n", "x", "o" }, "f", ts_repeat_move.builtin_f)
-    -- vim.keymap.set({ "n", "x", "o" }, "F", ts_repeat_move.builtin_F)
-    -- vim.keymap.set({ "n", "x", "o" }, "t", ts_repeat_move.builtin_t)
-    -- vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T)
   },
   opts = {
     textobjects = {
@@ -34,7 +30,7 @@ return {
           ["ia"] = "@parameter.inner",
           ["il"] = "@loop.inner",
           ["al"] = "@loop.outer",
-          ["at"] = "@comment.outer",
+          ["a/"] = "@comment.outer",
           ["iv"] = "@assignment.inner",
           ["av"] = "@assignment.outer",
         },

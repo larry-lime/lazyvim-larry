@@ -2,7 +2,6 @@
 return {
   -- Enabled plugins
   { "MaximilianLloyd/ascii.nvim" },
-  { "lervag/vimtex", lazy = true, event = "BufEnter *.tex" },
   { "LhKipp/nvim-nu", lazy = true, event = "BufEnter *.nu" },
   { "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
 
@@ -14,6 +13,7 @@ return {
   { "folke/trouble.nvim", enabled = false },
   { "nvim-ts-autotag", enabled = false },
   { "hrsh7th/cmp-emoji", enabled = false },
+  { "lervag/vimtex", enabled = false },
 
   -- NOTE: Mini sucks ass
   { "echasnovski/mini.surround", enabled = false },

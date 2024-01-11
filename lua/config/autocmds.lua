@@ -13,3 +13,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "vimwiki" },
   command = "set filetype=markdown",
 })
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  pattern = { "*.tex" },
+  command = "TexlabBuild",
+})

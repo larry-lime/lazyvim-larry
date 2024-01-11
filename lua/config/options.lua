@@ -4,7 +4,6 @@
 -- Remove from system clipboard
 local options = {
   clipboard = "unnamedplus",
-	hlsearch = false, -- highlight all matches on previous search pattern
 }
 
 vim.opt.shortmess:append("c")

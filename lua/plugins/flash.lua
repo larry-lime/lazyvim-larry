@@ -8,11 +8,11 @@ return {
   },
   opts = {
     mode = "fuzzy", -- fuzzy: fuzzy search, search: regular search
-    -- incremental = true,
+    incremental = true,
     modes = {
       char = {
         enabled = true,
-        keys = { "f", "F", "t", "T" },
+        keys = { "f", "F" },
         highlight = { backdrop = false },
         jump_labels = true,
       },

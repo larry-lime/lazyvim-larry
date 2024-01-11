@@ -1,4 +1,6 @@
 -- Delete lazyvim keymaps
+vim.keymap.del( "n" , "<S-l>")
+vim.keymap.del( "n" , "<S-h>")
 vim.keymap.del({ "n", "i", "v" }, "<C-s>")
 vim.keymap.del({ "n", "i", "v" }, "<A-j>")
 vim.keymap.del({ "n", "i", "v" }, "<A-k>")

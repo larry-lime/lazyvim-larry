@@ -1,6 +1,7 @@
 return {
   "folke/which-key.nvim",
   lazy = true,
+  enabled = false,
   event = function()
     return "LazyFile"
   end,

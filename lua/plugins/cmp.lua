@@ -17,9 +17,13 @@ return {
     opts.mapping = {
       ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
       ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-      ["<M-CR>"] = function(fallback)
-        cmp.abort()
-        fallback()
+      ["<M-CR>"] = function()
+        cmp.mapping.abort()
+        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<CR><Esc>O", true, true, true), "n", true)
+      end,
+      ["<C-CR>"] = function(fallback)
+        cmp.mapping.abort()
+        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<CR><Esc>O", true, true, true), "n", true)
       end,
       ["<C-k>"] = cmp.mapping.scroll_docs(-4),
       ["<C-j>"] = cmp.mapping.scroll_docs(4),

@@ -25,7 +25,6 @@ return {
         ["<C-s>"] = "actions.jump_split",
         ["h"] = "actions.left",
         ["l"] = "actions.right",
-        ["<C-c>"] = "actions.close",
       },
     },
   },

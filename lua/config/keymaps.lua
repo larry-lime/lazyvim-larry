@@ -18,9 +18,9 @@ map("n", "<C-w>", ":q<CR>", opts)
 map("n", "<C-x>", ":bd!<CR>", opts)
 
 -- Copy paste
-map("v", "<C-C>", '"+y', opts)
+-- map("v", "<C-C>", '"+y', opts)
 
-setmap("n", "<C-s>", function()
+setmap({ "n", "i" }, "<C-s>", function()
   require("conform").format({})
   vim.api.nvim_command("silent! w")
 end, opts)
@@ -42,3 +42,25 @@ map("i", "<M-Down>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
 map("i", "<M-Up>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
 map("v", "<M-Down>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
 map("v", "<M-Up>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+
+-- Surround
+map("n", [[<leader>']], [[ciw'<C-R>"'<Esc>]], opts)
+map("n", [[<leader>"]], [[ciw"<C-R>""<Esc>]], opts)
+map("n", [[<leader>(]], [[ciw(<C-R>")<Esc>F(]], opts)
+map("n", [[<leader>[]], [[ciw[<C-R>"]<Esc>F[]], opts)
+map("n", [[<leader>{]], [[ciw{<C-R>"}<Esc>]], opts)
+map("n", [[<leader>`]], [[ciw`<C-R>"`<Esc>]], opts)
+
+map("v", [[<leader>']], [[c'<C-R>"'<Esc>]], opts)
+map("v", [[<leader>"]], [[c"<C-R>""<Esc>]], opts)
+map("v", [[<leader>(]], [[c(<C-R>")<Esc>F(]], opts)
+map("v", [[<leader>[]], [[c[<C-R>"]<Esc>F[]], opts)
+map("v", [[<leader>{]], [[c{<C-R>"}<Esc>]], opts)
+map("v", [[<leader>`]], [[c`<C-R>"`<Esc>]], opts)
+
+-- Repeat movement with ; and ,
+-- ensure ; goes forward and , goes backward regardless of the last direction
+-- vim.keymap.set({ "n", "x", "o" }, "f", ts_repeat_move.builtin_f)
+-- vim.keymap.set({ "n", "x", "o" }, "F", ts_repeat_move.builtin_F)
+-- vim.keymap.set({ "n", "x", "o" }, "t", ts_repeat_move.builtin_t)
+-- vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T)

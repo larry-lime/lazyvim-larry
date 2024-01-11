@@ -1,8 +1,8 @@
 return {
   "pocco81/auto-save.nvim",
   event = "LazyFile",
+  enabled = true,
   opts = {
-    enabled = false, -- start auto-save when the plugin is loaded (i.e. when your package manager loads it)
     execution_message = {
       message = function() -- message to print on save
         return ""

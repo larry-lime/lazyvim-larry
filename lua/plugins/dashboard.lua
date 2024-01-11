@@ -21,7 +21,7 @@ return {
       },
       {
         action = [[lua require("oil").toggle_float()]],
-        desc = "Open Oil.nvim",
+        desc = " Open Oil.nvim",
         icon = " ",
         key = "o",
       },

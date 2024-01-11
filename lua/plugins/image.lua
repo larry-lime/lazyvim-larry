@@ -2,7 +2,8 @@ package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/shar
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
 return {
   "3rd/image.nvim",
-  event = "LazyFile",
+  lazy = true,
+  ft = "markdown",
   opts = {},
   config = function()
     -- Requirements

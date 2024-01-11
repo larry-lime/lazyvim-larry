@@ -4,12 +4,18 @@ return {
   opts = {
     keymaps = {
       ["q"] = function()
-        require("oil").save()
-        require("oil").discard_all_changes()
+        -- require("oil").save()
+        -- require("oil").discard_all_changes()
         require("oil").close()
       end,
-      -- ["o"] = "actions.select",
+      -- ["<CR>"] = function()
+      --   require("oil").save()
+      --   require("oil").select()
+      --   require("oil").close()
+      -- end,
     },
+    skip_confirm_for_simple_edits = false,
+    prompt_save_on_select_new_entry = false,
     view_options = {
       -- Show files and directories that start with "."
       show_hidden = true,

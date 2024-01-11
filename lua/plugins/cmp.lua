@@ -28,11 +28,6 @@ return {
         i = cmp.mapping.abort(),
         c = cmp.mapping.close(),
       }),
-      ["<C-s>"] = cmp.mapping.complete({
-        config = {
-          sources = { { name = "luasnip" } },
-        },
-      }),
       ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_next_item()

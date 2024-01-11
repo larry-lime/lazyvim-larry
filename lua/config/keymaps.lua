@@ -1,5 +1,5 @@
 -- Delete lazyvim keymaps
-vim.keymap.del({ "n", "i", "v" }, "<c-s>")
+vim.keymap.del({ "n", "i", "v" }, "<C-s>")
 vim.keymap.del({ "n", "i", "v" }, "<A-j>")
 vim.keymap.del({ "n", "i", "v" }, "<A-k>")
 
@@ -7,6 +7,7 @@ vim.keymap.del({ "n", "i", "v" }, "<A-k>")
 local opts = { noremap = true, silent = true }
 local nopts = { noremap = true, silent = false }
 local map = vim.api.nvim_set_keymap
+local setmap = vim.keymap.set
 local jump_opt = { noremap = false, silent = true }
 
 -- Select all
@@ -15,7 +16,14 @@ map("n", "<leader>A", "GVgg", opts)
 -- Buffer and tab navigation
 map("n", "<C-w>", ":q<CR>", opts)
 map("n", "<C-x>", ":bd!<CR>", opts)
-map("n", "<C-s>", "<C-^>", opts)
+
+-- Copy paste
+map("v", "<C-C>", '"+y', opts)
+
+setmap("n", "<C-s>", function()
+  require("conform").format({})
+  vim.api.nvim_command("silent! w")
+end, opts)
 
 -- Buffer and tab navigation
 map("n", "<leader>oa", ":%bd! | e# |bd#<CR>", opts)

@@ -8,11 +8,9 @@ return {
         -- require("oil").discard_all_changes()
         require("oil").close()
       end,
-      -- ["<CR>"] = function()
-      --   require("oil").save()
-      --   require("oil").select()
-      --   require("oil").close()
-      -- end,
+      ["o"] = function()
+        require("oil").select()
+      end,
     },
     skip_confirm_for_simple_edits = false,
     prompt_save_on_select_new_entry = false,

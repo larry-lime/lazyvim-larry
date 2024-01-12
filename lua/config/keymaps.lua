@@ -16,16 +16,16 @@ local jump_opt = { noremap = false, silent = true }
 map("n", "<leader>A", "GVgg", opts)
 
 -- Buffer and tab navigation
-map("n", "<C-w>", ":q<CR>", opts)
+map("n", "<C-t>", "<CMD>tabnew<CR>", opts)
+map("n", "<C-w>", "<CMD>tabclose<CR>", opts)
 map("n", "<C-x>", ":bd!<CR>", opts)
 
--- Copy paste
--- map("v", "<C-C>", '"+y', opts)
+map("n", "<C-s>", "<CMD>silent! w<CR>", opts)
+map("i", "<C-s>", "<CMD>silent! w<CR>", opts)
 
-setmap({ "n", "i" }, "<C-s>", function()
-  require("conform").format({})
-  vim.api.nvim_command("silent! w")
-end, opts)
+-- Copy paste
+-- map("v", "<C-c>", '"+y', opts)
+-- map("n", "<C-c>", '"+y', opts)
 
 -- Buffer and tab navigation
 map("n", "<leader>oa", ":%bd! | e# |bd#<CR>", opts)

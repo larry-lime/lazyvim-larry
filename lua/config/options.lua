@@ -3,7 +3,7 @@
 -- Add any additional options here
 -- Remove from system clipboard
 local options = {
-  clipboard = "unnamedplus",
+  clipboard = "unnamedplus", -- unnamedplus
 }
 
 vim.opt.shortmess:append("c")

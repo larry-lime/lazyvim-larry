@@ -1,7 +1,7 @@
 return {
   "pocco81/auto-save.nvim",
   event = "LazyFile",
-  enabled = true,
+  enabled = false,
   opts = {
     execution_message = {
       message = function() -- message to print on save

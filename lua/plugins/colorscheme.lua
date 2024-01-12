@@ -4,7 +4,16 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     opts = {
-      flavour = "macchiato", -- latte, frappe, macchiato, mocha
+      flavour = "latte", -- latte, frappe, macchiato, mocha
+    },
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "storm", -- storm, moon, night, day
     },
   },
 

@@ -14,6 +14,12 @@ return {
     "rcarriga/nvim-notify",
     "nvim-tree/nvim-web-devicons",
   },
+  keys = {
+    { "<leader>;", "<cmd>Leet test<cr>", desc = "LeetCode Test" },
+    { "<leader><cr>", "<cmd>Leet submit<cr>", desc = "LeetCode Submit" },
+    { "<leader>L", "<cmd>Leet list<cr>", desc = "LeetCode List" },
+    { "<leader>T", "<cmd>Leet tabs<cr>", desc = "LeetCode Tabs" },
+  },
   opts = {
     ---@type string
     arg = leet_arg,
@@ -98,6 +104,6 @@ return {
     },
 
     ---@type boolean
-    image_support = true, -- setting this to `true` will disable question description wrap
+    image_support = false, -- setting this to `true` will disable question description wrap
   },
 }

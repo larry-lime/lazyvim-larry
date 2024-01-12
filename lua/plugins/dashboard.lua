@@ -1,7 +1,8 @@
 return {
   "nvimdev/dashboard-nvim",
   opts = function(_, opts)
-    local logo = require("ascii").get_random("text", "neovim")
+    -- local logo = require("ascii").get_random("planets", "planets")
+    local logo = require("ascii").get_random_global()
     local logo_str = table.concat(logo, "\n")
 
     logo_str = string.rep("\n", 8) .. logo_str .. "\n\n"

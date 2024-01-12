@@ -18,6 +18,5 @@ return {
   -- NOTE: Mini sucks ass
   { "echasnovski/mini.surround", enabled = false },
   { "echasnovski/mini.pairs", enabled = false },
-  { "echasnovski/mini.ai", enabled = false },
   { "echasnovski/mini.indentscope", enabled = false },
 }

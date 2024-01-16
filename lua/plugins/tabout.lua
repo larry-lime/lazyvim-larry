@@ -1,5 +1,6 @@
 return {
   "abecodes/tabout.nvim",
+  enabled = true,
   event = "InsertEnter",
   opts = {
     tabkey = "<C-t>", -- key to trigger tabout, set to an empty string to disable

@@ -23,6 +23,10 @@ map("n", "<C-x>", ":bd!<CR>", opts)
 map("n", "<C-s>", "<CMD>silent! w<CR>", opts)
 map("i", "<C-s>", "<CMD>silent! w<CR>", opts)
 
+-- NOTE: Ideally, put this in the bufferline config
+map("n", "<C-p>", "<cmd>BufferLineCyclePrev<cr>", opts)
+map("n", "<C-n>", "<cmd>BufferLineCycleNext<cr>", opts)
+
 -- Copy paste
 -- map("v", "<C-c>", '"+y', opts)
 -- map("n", "<C-c>", '"+y', opts)
@@ -46,19 +50,19 @@ map("v", "<M-Down>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
 map("v", "<M-Up>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
 -- Surround
-map("n", [[<leader>']], [[ciw'<C-R>"'<Esc>]], opts)
 map("n", [[<leader>"]], [[ciw"<C-R>""<Esc>]], opts)
 map("n", [[<leader>(]], [[ciw(<C-R>")<Esc>F(]], opts)
 map("n", [[<leader>[]], [[ciw[<C-R>"]<Esc>F[]], opts)
 map("n", [[<leader>{]], [[ciw{<C-R>"}<Esc>]], opts)
 map("n", [[<leader>`]], [[ciw`<C-R>"`<Esc>]], opts)
+-- map("n", [[<leader>']], [[ciw'<C-R>"'<Esc>]], opts)
 
-map("v", [[<leader>']], [[c'<C-R>"'<Esc>]], opts)
 map("v", [[<leader>"]], [[c"<C-R>""<Esc>]], opts)
 map("v", [[<leader>(]], [[c(<C-R>")<Esc>F(]], opts)
 map("v", [[<leader>[]], [[c[<C-R>"]<Esc>F[]], opts)
 map("v", [[<leader>{]], [[c{<C-R>"}<Esc>]], opts)
 map("v", [[<leader>`]], [[c`<C-R>"`<Esc>]], opts)
+-- map("v", [[<leader>']], [[c'<C-R>"'<Esc>]], opts)
 
 -- Repeat movement with ; and ,
 -- ensure ; goes forward and , goes backward regardless of the last direction

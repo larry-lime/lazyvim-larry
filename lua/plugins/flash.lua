@@ -15,6 +15,7 @@ return {
         keys = { "f", "F" },
         highlight = { backdrop = false },
         jump_labels = true,
+        label = { exclude = "hjkliardc" },
       },
     },
   },

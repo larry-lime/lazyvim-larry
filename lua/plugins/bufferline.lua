@@ -4,6 +4,7 @@ return {
     options = {
       mode = "buffers", -- set to "tabs" to only show tabpages instead
       numbers = "ordinal", --[[ | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string, ]]
+      always_show_bufferline = false,
       modified_icon = "●",
       indicator = {
         icon = "▎", -- this should be omitted if indicator style is not 'icon'
@@ -18,6 +19,7 @@ return {
           separator = true,
         },
       },
+      -- separator_style = "thin" --[[ "slant "| "slope" | "thick" | "thin" | { 'any', 'any' } ]],
       separator_style = "thin" --[[ "slant "| "slope" | "thick" | "thin" | { 'any', 'any' } ]],
       groups = {
         options = {

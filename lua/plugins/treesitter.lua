@@ -44,7 +44,6 @@ return {
           ["]c"] = "@conditional.outer",
           ["]v"] = "@assignment.outer",
           ["]a"] = "@parameter.inner",
-          ["]A"] = "@parameter.outer",
           ["]f"] = "@call.outer",
           ["]r"] = "@return.outer",
           ["]l"] = "@loop.outer",
@@ -63,6 +62,8 @@ return {
         goto_next_end = {
           ["]M"] = "@function.outer",
           ["]["] = "@class.outer",
+          ["]A"] = "@parameter.outer",
+          ["]L"] = "@loop.outer",
         },
         goto_previous_end = {
           ["[M"] = "@function.outer",

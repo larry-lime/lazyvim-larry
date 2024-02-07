@@ -1,5 +1,8 @@
 return {
   "nvim-telescope/telescope.nvim",
+  keys = {
+    { "<leader>tl", "<cmd>Telescope<cr>", desc = "Telescope" },
+  },
   opts = {
     defaults = {
       mappings = {

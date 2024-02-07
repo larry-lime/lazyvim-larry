@@ -2,11 +2,13 @@ return {
   -- Add colorscheme
   {
     "catppuccin/nvim",
+    lazy = false,
     name = "catppuccin",
     opts = {
       flavour = "latte", -- latte, frappe, macchiato, mocha
     },
   },
+  { "ellisonleao/gruvbox.nvim", lazy = false },
 
   {
     "folke/tokyonight.nvim",

@@ -3,10 +3,11 @@
 -- Add any additional options here
 -- Remove from system clipboard
 local options = {
-  clipboard = "unnamedplus", -- unnamedplus
+  clipboard = "", -- unnamedplus
+  background = "dark",
 }
 
-vim.opt.shortmess:append("c")
+-- vim.opt.shortmess:append("c")
 
 for k, v in pairs(options) do
   vim.opt[k] = v

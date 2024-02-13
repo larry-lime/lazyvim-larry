@@ -1,5 +1,4 @@
 return {
-  -- Add colorscheme
   {
     "catppuccin/nvim",
     lazy = false,
@@ -18,8 +17,6 @@ return {
       style = "storm", -- storm, moon, night, day
     },
   },
-
-  -- Configure LazyVim to load colorscheme
   {
     "LazyVim/LazyVim",
     opts = {

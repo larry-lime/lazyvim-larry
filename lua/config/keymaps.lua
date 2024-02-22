@@ -20,6 +20,7 @@ map("n", "<leader>A", "GVgg", opts)
 -- map("n", "<C-w>", "<CMD>tabclose<CR>", opts)
 map("n", "<C-x>", ":bd!<CR>", opts)
 map("n", "<leader>xx", ":q<CR>", opts)
+map("n", "<leader>R", ":e %<CR>", opts)
 
 map("n", "<C-s>", "<CMD>silent! w<CR>", opts)
 map("i", "<C-s>", "<CMD>silent! w<CR>", opts)

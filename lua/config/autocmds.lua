@@ -3,7 +3,7 @@
 -- Add any additional autocmds here
 -- Disable autoformat for lua files
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "*astro" },
+  pattern = { "*astro", "*fish" },
   callback = function()
     vim.b.autoformat = false
   end,
@@ -12,6 +12,18 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "vimwiki" },
   command = "set filetype=markdown",
+})
+
+-- vim.api.nvim_create_autocmd({ "FileType" }, {
+--   pattern = { "*mly" },
+--   command = "TSDisable highlight | LspStop",
+-- })
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.mly",
+  callback = function()
+    vim.cmd("TSDisable highlight")
+  end,
 })
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {

@@ -28,6 +28,9 @@ map("i", "<C-s>", "<CMD>silent! w<CR>", opts)
 map("n", "<C-p>", "<cmd>BufferLineCyclePrev<cr>", opts)
 map("n", "<C-n>", "<cmd>BufferLineCycleNext<cr>", opts)
 
+map("n", "<leader>rn", "*Ncgn", opts)
+map("n", "<leader>rm", 'yiw:%s/<C-r>"/', nopts)
+
 -- Copy paste
 map("v", "<C-c>", '"+y', opts)
 map("n", "<C-c>", '"+y', opts)

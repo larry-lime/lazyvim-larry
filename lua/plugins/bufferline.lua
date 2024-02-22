@@ -2,7 +2,7 @@ return {
   "akinsho/bufferline.nvim",
   opts = {
     options = {
-      mode = "buffers", -- set to "tabs" to only show tabpages instead
+      mode = "tabs", -- set to "tabs" to only show tabpages instead
       numbers = "ordinal", --[[ | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string, ]]
       always_show_bufferline = false,
       modified_icon = "●",

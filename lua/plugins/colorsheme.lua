@@ -4,7 +4,7 @@ return {
     lazy = false,
     name = "catppuccin",
     opts = {
-      flavour = "latte", -- latte, frappe, macchiato, mocha
+      flavour = "macchiato", -- latte, frappe, macchiato, mocha
     },
   },
   { "ellisonleao/gruvbox.nvim", lazy = false },
@@ -20,7 +20,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight", -- tokyonight, gruvbox, catppuccin
+      colorscheme = "catppuccin", -- tokyonight, gruvbox, catppuccin
     },
   },
 }

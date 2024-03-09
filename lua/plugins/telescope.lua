@@ -2,6 +2,7 @@ return {
   "nvim-telescope/telescope.nvim",
   keys = {
     { "<leader>tl", "<cmd>Telescope<cr>", desc = "Telescope" },
+    { "<leader>kp", "<cmd>Telescope keymaps<cr>", desc = "Telescope" },
   },
   opts = {
     defaults = {

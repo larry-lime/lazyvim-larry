@@ -18,9 +18,16 @@ return {
     },
   },
   {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    opts = {
+      variant = "moon", -- auto, main, moon, or dawn
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin", -- tokyonight, gruvbox, catppuccin
+      colorscheme = "catppuccin", -- tokyonight, gruvbox, catppuccin, rose-pine
     },
   },
 }

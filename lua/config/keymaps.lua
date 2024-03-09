@@ -1,7 +1,6 @@
 -- Delete lazyvim keymaps
 vim.keymap.del("n", "<S-l>")
 vim.keymap.del("n", "<S-h>")
-vim.keymap.del({ "n", "i", "v" }, "<C-s>")
 vim.keymap.del({ "n", "i", "v" }, "<A-j>")
 vim.keymap.del({ "n", "i", "v" }, "<A-k>")
 
@@ -22,9 +21,6 @@ map("n", "<C-x>", ":bd!<CR>", opts)
 map("n", "<leader>xx", ":q<CR>", opts)
 map("n", "<leader>R", ":e %<CR>", opts)
 
-map("n", "<C-s>", "<CMD>silent! w<CR>", opts)
-map("i", "<C-s>", "<CMD>silent! w<CR>", opts)
-
 -- NOTE: Ideally, put this in the bufferline config
 map("n", "<C-p>", "<cmd>BufferLineCyclePrev<cr>", opts)
 map("n", "<C-n>", "<cmd>BufferLineCycleNext<cr>", opts)
@@ -41,7 +37,7 @@ map("n", "<leader>oa", ":%bd! | e# |bd#<CR>", opts)
 
 -- Copilot
 map("n", "<leader>ce", ":Copilot enable<CR>", opts)
-map("n", "<leader>cd", ":Copilot disable<CR>", opts)
+-- map("n", "<leader>cd", ":Copilot disable<CR>", opts)
 
 -- Backspace
 map("i", "<M-BS>", "<C-W>", opts)
@@ -59,7 +55,7 @@ map("n", [[<leader>"]], [[ciw"<C-R>""<Esc>]], opts)
 map("n", [[<leader>(]], [[ciw(<C-R>")<Esc>F(]], opts)
 map("n", [[<leader>[]], [[ciw[<C-R>"]<Esc>F[]], opts)
 map("n", [[<leader>{]], [[ciw{<C-R>"}<Esc>]], opts)
-map("n", [[<leader>`]], [[ciw`<C-R>"`<Esc>]], opts)
+-- map("n", [[<leader>`]], [[ciw`<C-R>"`<Esc>]], opts)
 -- map("n", [[<leader>']], [[ciw'<C-R>"'<Esc>]], opts)
 
 map("v", [[<leader>"]], [[c"<C-R>""<Esc>]], opts)

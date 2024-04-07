@@ -11,5 +11,5 @@ return {
   { "echasnovski/mini.surround", enabled = false },
   { "echasnovski/mini.pairs", enabled = false },
   { "echasnovski/mini.indentscope", enabled = false },
-  { "echasnovski/mini.comment", enabled = false },
+  { "ahmedkhalf/project.nvim", enabled = false },
 }

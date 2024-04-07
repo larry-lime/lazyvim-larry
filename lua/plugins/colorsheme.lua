@@ -7,11 +7,12 @@ return {
       flavour = "macchiato", -- latte, frappe, macchiato, mocha
     },
   },
-  { "ellisonleao/gruvbox.nvim", lazy = false },
+  { "ellisonleao/gruvbox.nvim", lazy = false, enabled = false },
 
   {
     "folke/tokyonight.nvim",
     lazy = false,
+    enabled = false,
     priority = 1000,
     opts = {
       style = "storm", -- storm, moon, night, day
@@ -20,6 +21,7 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
+    enabled = false,
     opts = {
       variant = "moon", -- auto, main, moon, or dawn
     },

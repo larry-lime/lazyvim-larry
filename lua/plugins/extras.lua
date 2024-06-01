@@ -9,11 +9,5 @@ return {
     enabled = true,
     opts = {},
   },
-  -- {
-  --   "numToStr/Comment.nvim",
-  --   lazy = false,
-  --   config = function()
-  --     require("Comment").setup()
-  --   end,
-  -- },
+  { "L3MON4D3/LuaSnip", enabled = true },
 }

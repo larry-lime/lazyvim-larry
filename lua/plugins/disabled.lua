@@ -4,7 +4,7 @@ return {
   { "rcarriga/nvim-notify", enabled = false },
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   { "RRethy/vim-illuminate", enabled = false },
-  { "folke/trouble.nvim", enabled = true },
+  { "folke/trouble.nvim", enabled = false },
   { "nvim-ts-autotag", enabled = false },
   { "hrsh7th/cmp-emoji", enabled = false },
   { "lervag/vimtex", enabled = false },

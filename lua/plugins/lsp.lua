@@ -3,7 +3,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       diagnostics = {
-        virtual_text = true,
+        virtual_text = false,
         float = {
           focusable = false,
           style = "minimal",

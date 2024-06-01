@@ -1,9 +1,18 @@
 -- Delete lazyvim keymaps
 vim.keymap.del("n", "<S-l>")
 vim.keymap.del("n", "<S-h>")
+vim.keymap.del("n", "<leader><Tab><Tab>")
+vim.keymap.del("n", "<leader><tab>l")
+vim.keymap.del("n", "<leader><tab>f")
+vim.keymap.del("n", "<leader><tab>]")
+vim.keymap.del("n", "<leader><tab>d")
+vim.keymap.del("n", "<leader><tab>[")
+vim.keymap.del("n", "<leader>w-")
+vim.keymap.del("n", "<leader>w|")
+vim.keymap.del("n", "<leader>ww")
+vim.keymap.del("n", "<leader>wd")
 vim.keymap.del({ "n", "i", "v" }, "<A-j>")
 vim.keymap.del({ "n", "i", "v" }, "<A-k>")
-
 -- Add custom keymaps
 local opts = { noremap = true, silent = true }
 local nopts = { noremap = true, silent = false }
@@ -11,15 +20,37 @@ local map = vim.api.nvim_set_keymap
 local setmap = vim.keymap.set
 local jump_opt = { noremap = false, silent = true }
 
+-- Function to source init.lua and reload current file
+function ReloadConfigAndCurrentFile()
+  vim.cmd("silent Lazy reload catppuccin bufferline.nvim lualine.nvim")
+  vim.cmd("edit %")
+end
+
+-- Create a user command
+vim.api.nvim_create_user_command("ReloadConfigAndFile", ReloadConfigAndCurrentFile, {})
+
+-- Map <C-r> to the command
+map("n", "<C-r>", ":ReloadConfigAndFile<CR>", { noremap = true, silent = true })
+
 -- Select all
 map("n", "<leader>A", "GVgg", opts)
+
+map("n", "<leader>br", ":BufferLineTabRename ", opts)
+
+map("n", "<leader>t", ":tabnew<CR>", opts)
+-- map("n", "<leader>w", ":bdelete | tabclose<CR>", opts)
+map("n", "<leader>w", ":tabclose<CR>", opts)
+map("n", "<leader><Tab>", "g<Tab>", opts)
 
 -- Buffer and tab navigation
 -- map("n", "<C-t>", "<CMD>tabnew<CR>", opts)
 -- map("n", "<C-w>", "<CMD>tabclose<CR>", opts)
 map("n", "<C-x>", ":bd!<CR>", opts)
 map("n", "<leader>xx", ":q<CR>", opts)
-map("n", "<leader>R", ":e %<CR>", opts)
+-- TODO: Disable todo comments
+map("n", "[t", ":tabprevious<CR>", opts)
+map("n", "]t", ":tabnext<CR>", opts)
+-- map("n", "<leader>R", ":e %<CR>", opts)
 
 -- NOTE: Ideally, put this in the bufferline config
 map("n", "<C-p>", "<cmd>BufferLineCyclePrev<cr>", opts)
@@ -34,6 +65,7 @@ map("n", "<C-c>", '"+y', opts)
 
 -- Buffer and tab navigation
 map("n", "<leader>oa", ":%bd! | e# |bd#<CR>", opts)
+-- map("n", "<leader><Tab>", "<C-6>", opts)
 
 -- Copilot
 map("n", "<leader>ce", ":Copilot enable<CR>", opts)

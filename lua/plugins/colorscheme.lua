@@ -4,7 +4,8 @@ return {
     lazy = false,
     name = "catppuccin",
     opts = {
-      flavour = "macchiato", -- latte, frappe, macchiato, mocha
+      -- latte, frappe, macchiato, mocha
+      flavour = "macchiato",
     },
   },
   { "ellisonleao/gruvbox.nvim", lazy = false, enabled = false },

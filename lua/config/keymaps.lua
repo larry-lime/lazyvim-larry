@@ -20,18 +20,6 @@ local map = vim.api.nvim_set_keymap
 local setmap = vim.keymap.set
 local jump_opt = { noremap = false, silent = true }
 
--- Function to source init.lua and reload current file
-function ReloadConfigAndCurrentFile()
-  vim.cmd("silent Lazy reload catppuccin bufferline.nvim lualine.nvim")
-  vim.cmd("edit %")
-end
-
--- Create a user command
-vim.api.nvim_create_user_command("ReloadConfigAndFile", ReloadConfigAndCurrentFile, {})
-
--- Map <C-r> to the command
-map("n", "<C-r>", ":ReloadConfigAndFile<CR>", { noremap = true, silent = true })
-
 -- Select all
 map("n", "<leader>A", "GVgg", opts)
 

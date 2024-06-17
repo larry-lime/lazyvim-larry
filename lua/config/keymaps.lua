@@ -13,6 +13,7 @@ vim.keymap.del("n", "<leader>ww")
 vim.keymap.del("n", "<leader>wd")
 vim.keymap.del({ "n", "i", "v" }, "<A-j>")
 vim.keymap.del({ "n", "i", "v" }, "<A-k>")
+
 -- Add custom keymaps
 local opts = { noremap = true, silent = true }
 local nopts = { noremap = true, silent = false }
@@ -25,10 +26,10 @@ map("n", "<leader>A", "GVgg", opts)
 
 map("n", "<leader>br", ":BufferLineTabRename ", opts)
 
-map("n", "<leader>t", ":tabnew<CR>", opts)
+-- map("n", "<leader>t", ":tabnew<CR>", opts)
 -- map("n", "<leader>w", ":bdelete | tabclose<CR>", opts)
-map("n", "<leader>w", ":tabclose<CR>", opts)
-map("n", "<leader><Tab>", "g<Tab>", opts)
+-- map("n", "<leader>w", ":tabclose<CR>", opts)
+-- map("n", "<leader><Tab>", "g<Tab>", opts)
 
 -- Buffer and tab navigation
 -- map("n", "<C-t>", "<CMD>tabnew<CR>", opts)
@@ -46,10 +47,6 @@ map("n", "<C-n>", "<cmd>BufferLineCycleNext<cr>", opts)
 
 map("n", "<leader>rn", "*Ncgn", opts)
 map("n", "<leader>rm", 'yiw:%s/<C-r>"/', nopts)
-
--- Copy paste
-map("v", "<C-c>", '"+y', opts)
-map("n", "<C-c>", '"+y', opts)
 
 -- Buffer and tab navigation
 map("n", "<leader>oa", ":%bd! | e# |bd#<CR>", opts)
@@ -83,11 +80,7 @@ map("v", [[<leader>(]], [[c(<C-R>")<Esc>F(]], opts)
 map("v", [[<leader>[]], [[c[<C-R>"]<Esc>F[]], opts)
 map("v", [[<leader>{]], [[c{<C-R>"}<Esc>]], opts)
 map("v", [[<leader>`]], [[c`<C-R>"`<Esc>]], opts)
--- map("v", [[<leader>']], [[c'<C-R>"'<Esc>]], opts)
 
--- Repeat movement with ; and ,
--- ensure ; goes forward and , goes backward regardless of the last direction
--- vim.keymap.set({ "n", "x", "o" }, "f", ts_repeat_move.builtin_f)
--- vim.keymap.set({ "n", "x", "o" }, "F", ts_repeat_move.builtin_F)
--- vim.keymap.set({ "n", "x", "o" }, "t", ts_repeat_move.builtin_t)
--- vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T)
+-- NOTE: Comments
+map("v", "🗂️", "<cmd>normal gcc<cr>", opts)
+map("n", "🗂️", "<cmd>normal gcc<cr>", opts)

@@ -1,5 +1,9 @@
 return {
   "akinsho/bufferline.nvim",
+  keys = {
+    { "<M-[>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
+    { "<M-]>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
+  },
   opts = {
     options = {
       mode = "buffers", -- set to "tabs" to only show tabpages instead
@@ -19,7 +23,6 @@ return {
           separator = true,
         },
       },
-      -- separator_style = "thin" --[[ "slant "| "slope" | "thick" | "thin" | { 'any', 'any' } ]],
       separator_style = "thin" --[[ "slant "| "slope" | "thick" | "thin" | { 'any', 'any' } ]],
       groups = {
         options = {

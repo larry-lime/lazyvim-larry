@@ -9,6 +9,23 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   end,
 })
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.lalrpop" },
+  command = "set filetype=lalrpop | TSBufEnable highlight",
+})
+
+-- TODO: Move to LSP when I have the time
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "move" },
+  callback = function()
+    vim.lsp.start({
+      name = "move-analyzer",
+      cmd = { "move-analyzer" },
+      root_dir = vim.fs.root(0, { "Move.toml" }),
+    })
+  end,
+})
+
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "vimwiki" },
   command = "set filetype=markdown",

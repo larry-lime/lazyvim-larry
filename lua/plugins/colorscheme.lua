@@ -1,36 +1,63 @@
 return {
   {
     "catppuccin/nvim",
-    lazy = false,
+    event = "VeryLazy",
     name = "catppuccin",
     opts = {
       -- latte, frappe, macchiato, mocha
       flavour = "latte",
+      background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+      },
+      styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+        comments = {}, -- Change the style of comments
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = { "italic" },
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+        -- miscs = {}, -- Uncomment to turn off hard-coded styles
+      },
     },
   },
-  { "ellisonleao/gruvbox.nvim", lazy = false, enabled = false },
-
+  { "ellisonleao/gruvbox.nvim", event = "VeryLazy", enabled = true },
   {
     "folke/tokyonight.nvim",
-    lazy = false,
-    enabled = false,
-    priority = 1000,
+    event = "VeryLazy",
+    enabled = true,
     opts = {
-      style = "storm", -- storm, moon, night, day
+      style = "moon", -- storm, moon, night, day
     },
   },
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    enabled = false,
+    event = "VeryLazy",
+    enabled = true,
     opts = {
-      variant = "moon", -- auto, main, moon, or dawn
+      variant = "auto", -- auto, main, moon, or dawn
+      dark_variant = "moon", -- main, moon, or dawn
+      highlight_groups = {
+        ["@comment"] = { italic = false },
+        ["@variable"] = { italic = false },
+        ["@function"] = { italic = false },
+        ["@conditional"] = { italic = true },
+        ["@keyword"] = { italic = true },
+        ["@class"] = { italic = false },
+      },
     },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin", -- tokyonight, gruvbox, catppuccin, rose-pine
+      colorscheme = "tokyonight", -- tokyonight, gruvbox, catppuccin, rose-pine
     },
   },
 }

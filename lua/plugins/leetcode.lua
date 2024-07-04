@@ -15,12 +15,12 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   keys = {
-    { "<leader>'", "<cmd>Leet test<cr>", desc = "LeetCode Test" },
-    { "<leader><cr>", "<cmd>Leet submit<cr>", desc = "LeetCode Submit" },
-    { "<leader>L", "<cmd>Leet list<cr>", desc = "LeetCode List" },
-    { "<leader>T", "<cmd>Leet tabs<cr>", desc = "LeetCode Tabs" },
-    { "<leader>C", "<cmd>Leet console<cr>", desc = "LeetCode Tabs" },
-    { "<leader>D", "<cmd>Leet desc<cr>", desc = "LeetCode Tabs" },
+    { "<leader>'", "<CMD>Leet test<CR>", desc = "LeetCode Test" },
+    { "<leader><CR>", "<CMD>Leet submit<CR>", desc = "LeetCode Submit" },
+    { "<leader>L", "<CMD>Leet list<CR>", desc = "LeetCode List" },
+    { "<leader>T", "<CMD>Leet tabs<CR>", desc = "LeetCode Tabs" },
+    { "<leader>C", "<CMD>Leet console<CR>", desc = "LeetCode Tabs" },
+    { "<leader>D", "<CMD>Leet desc<CR>", desc = "LeetCode Tabs" },
   },
   opts = {
     ---@type string

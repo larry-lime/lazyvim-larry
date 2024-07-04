@@ -1,13 +1,20 @@
 return {
   { "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
-  { "echasnovski/mini.ai", lazy = true, event = "BufEnter *.md", enabled = true },
+  {
+    "echasnovski/mini.ai",
+    event = function()
+      return "BufReadPre"
+    end,
+    enabled = false,
+  },
   {
     "tiagovla/scope.nvim",
-    event = function()
-      return "LazyFile"
-    end,
-    enabled = true,
+    enabled = false,
     opts = {},
   },
   { "L3MON4D3/LuaSnip", enabled = true },
+  {
+    "folke/trouble.nvim",
+    event = "BufRead",
+  },
 }

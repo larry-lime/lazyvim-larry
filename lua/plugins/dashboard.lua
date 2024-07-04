@@ -13,7 +13,7 @@ return {
           action = "Telescope find_files",
           desc = " Find file                               ",
           icon = " ",
-          key = "f",
+          key = "k",
         },
         {
           action = "ene | startinsert",
@@ -34,10 +34,10 @@ return {
           key = "/",
         },
         {
-          action = [[lua require("lazyvim.util").telescope.config_files()()]],
-          desc = " Config",
+          action = "DBUI",
+          desc = " Open Database",
           icon = " ",
-          key = "c",
+          key = "d",
         },
         {
           action = 'lua require("persistence").load()',

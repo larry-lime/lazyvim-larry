@@ -17,7 +17,7 @@ return {
   },
   keys = {
     {
-      "<leader>z",
+      "🙄",
       function()
         require("neo-zoom").neo_zoom({})
       end,

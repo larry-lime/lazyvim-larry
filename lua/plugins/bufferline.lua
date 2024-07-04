@@ -1,14 +1,11 @@
 return {
   "akinsho/bufferline.nvim",
-  keys = {
-    { "<M-[>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-    { "<M-]>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
-  },
+  enabled = true,
   opts = {
     options = {
       mode = "buffers", -- set to "tabs" to only show tabpages instead
       numbers = "ordinal", --[[ | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string, ]]
-      always_show_bufferline = true,
+      always_show_bufferline = false,
       modified_icon = "●",
       indicator = {
         icon = "▎", -- this should be omitted if indicator style is not 'icon'

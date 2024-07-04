@@ -26,6 +26,6 @@ return {
     },
   },
   keys = {
-    { "<leader>nv", "<cmd>:AerialNavToggle<cr>", desc = "Aerial (Nav)" },
+    { "<leader>nv", "<CMD>:AerialNavToggle<CR>", desc = "Aerial (Nav)" },
   },
 }

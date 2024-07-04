@@ -1,7 +1,6 @@
 return {
   "hrsh7th/nvim-cmp",
   dependencies = {
-    "hrsh7th/cmp-emoji",
     {
       "supermaven-inc/supermaven-nvim",
       enabled = true,
@@ -9,18 +8,18 @@ return {
       config = function()
         require("supermaven-nvim").setup({
           keymaps = {
-            accept_suggestion = "<C-c>",
+            accept_suggestion = "<C-g>",
             clear_suggestion = "<C-]>",
             accept_word = "<C-j>",
           },
-          ignore_filetypes = { cpp = false },
+          ignore_filetypes = { markdown = true },
           color = {
-            suggestion_color = "#ffffff",
+            -- suggestion_color = "#ffffff",
             cterm = 244,
           },
-          log_level = "info", -- set to "off" to disable logging completely
-          disable_inline_completion = true, -- disables inline completion for use with cmp
-          disable_keymaps = true, -- disables built in keymaps for more manual control
+          log_level = "off", -- set to "off" to disable logging completely
+          disable_inline_completion = false, -- disables inline completion for use with cmp
+          disable_keymaps = false, -- disables built in keymaps for more manual control
         })
       end,
     },
@@ -29,11 +28,11 @@ return {
   opts = function(_, opts)
     local luasnip = require("luasnip")
     local cmp = require("cmp")
-    table.insert(opts.sources, 1, {
-      name = "supermaven",
-      group_index = 1,
-      priority = 10000,
-    })
+    -- table.insert(opts.sources, 1, {
+    --   name = "supermaven",
+    --   group_index = 1,
+    --   priority = 10000,
+    -- })
     opts.preselect = cmp.PreselectMode.None
     opts.window = {
       completion = cmp.config.window.bordered(),
@@ -43,10 +42,6 @@ return {
     opts.mapping = {
       ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
       ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-      ["<M-CR>"] = function()
-        cmp.mapping.abort()
-        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<CR><Esc>O", true, true, true), "n", true)
-      end,
       ["<C-CR>"] = function(fallback)
         cmp.mapping.abort()
         vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<CR><Esc>O", true, true, true), "n", true)

@@ -10,10 +10,12 @@ return {
     mode = "fuzzy", -- fuzzy: fuzzy search, search: regular search
     incremental = true,
     modes = {
+      search = {
+        enabled = true,
+      },
       char = {
         enabled = true,
         keys = { "f", "F" },
-        highlight = { backdrop = false },
         jump_labels = true,
         label = { exclude = "hjkliardc" },
       },

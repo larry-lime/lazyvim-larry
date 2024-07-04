@@ -4,13 +4,13 @@ return {
   opts = {
     keymaps = {
       ["q"] = function()
-        -- require("oil").save()
+        require("oil").save()
         -- require("oil").discard_all_changes()
         require("oil").close()
       end,
-      ["o"] = function()
-        require("oil").select()
-      end,
+      -- ["o"] = function()
+      --   require("oil").select()
+      -- end,
     },
     skip_confirm_for_simple_edits = false,
     prompt_save_on_select_new_entry = false,

@@ -1,8 +1,11 @@
 return {
   "nvim-telescope/telescope.nvim",
+  enabled = true,
   keys = {
-    -- { "<leader>tl", "<cmd>Telescope<cr>", desc = "Telescope" },
-    { "<leader>kp", "<cmd>Telescope keymaps<cr>", desc = "Telescope" },
+    { "<leader>K", "<CMD>Telescope<CR>", desc = "Telescope" },
+    { "<leader>/", "<CMD>Telescope live_grep<CR>", desc = "Telescope Grep" },
+    { "<leader>k", "<CMD>Telescope find_files<CR>", desc = "Telescope Gitfiles" },
+    { "<leader>ff", "<CMD>Telescope git_files<CR>", desc = "Telescope Gitfiles" },
   },
   opts = {
     defaults = {

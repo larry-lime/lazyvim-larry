@@ -2,13 +2,14 @@ return {
   {
     "catppuccin/nvim",
     event = "VeryLazy",
+    enabled = true,
     name = "catppuccin",
     opts = {
       -- latte, frappe, macchiato, mocha
-      flavour = "latte",
+      -- flavour = "latte",
       background = { -- :h background
         light = "latte",
-        dark = "mocha",
+        dark = "macchiato",
       },
       styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
         comments = {}, -- Change the style of comments
@@ -33,7 +34,16 @@ return {
     event = "VeryLazy",
     enabled = true,
     opts = {
-      style = "moon", -- storm, moon, night, day
+      style = "moon", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+      light_style = "day", -- The theme is used when the background is set to light
+      styles = {
+        -- Style to be applied to different syntax groups
+        -- Value is any valid attr-list value for `:help nvim_set_hl`
+        comments = { italic = true },
+        keywords = { italic = true },
+        functions = {},
+        variables = {},
+      },
     },
   },
   {

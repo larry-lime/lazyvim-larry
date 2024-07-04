@@ -3,6 +3,7 @@ vim.keymap.del("n", "<S-l>")
 vim.keymap.del("n", "<S-h>")
 vim.keymap.del({ "n", "i", "v" }, "<A-j>")
 vim.keymap.del({ "n", "i", "v" }, "<A-k>")
+vim.keymap.del({ "n", "i", "v" }, "<C-s>")
 
 -- Set variables for keymaps
 local opts = { noremap = true, silent = true }
@@ -21,6 +22,9 @@ map("n", "😑", "<CMD>close<CR>", opts)
 -- TODO: Disable todo comments
 map("n", "[t", "<CMD>tabprevious<CR>", opts)
 map("n", "]t", "<CMD>tabnext<CR>", opts)
+
+-- Close all buffers except current
+map("n", "<leader>oa", ":%bd! | e# |bd#<CR>", opts)
 
 -- Manual search and replace in buffer
 map("n", "<leader>rn", "*Ncgn", opts)
@@ -46,3 +50,19 @@ map("n", "😚", "<CMD>qa<CR>", opts)
 
 -- Rename tab
 map("n", "<leader>br", ":BufferLineTabRename ", opts)
+
+-- Cycle through tabs
+map("n", "<M-[>", "<CMD>BufferlineCyclePrev<CR>", opts)
+map("n", "<M-]>", "<CMD>BufferlineCycleNext<CR>", opts)
+
+map("n", "<M-[>", "<CMD>tabprevious<CR>", opts)
+map("n", "<M-]>", "<CMD>tabnext<CR>", opts)
+
+-- Make saves silent
+map("n", "<C-s>", "<CMD>silent w<CR>", opts)
+
+-- Improveed yank
+map("n", "<leader>y", "^vg_y", opts)
+
+-- Get Information
+map("n", "<C-i>", "<CMD>lua Display_filename_with_modified_and_tab()<CR>", opts)

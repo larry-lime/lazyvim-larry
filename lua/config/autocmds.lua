@@ -3,7 +3,7 @@
 -- Add any additional autocmds here
 -- Disable autoformat for lua files
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "*" },
+  pattern = { "typescriptreact", "typescript", "python" },
   callback = function()
     vim.b.autoformat = false
   end,
@@ -12,6 +12,18 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = { "*.lalrpop" },
   command = "set filetype=lalrpop | TSBufEnable highlight",
+})
+
+-- TODO: Move to LSP when I have the time
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "move" },
+  callback = function()
+    vim.lsp.start({
+      name = "move-analyzer",
+      cmd = { "move-analyzer" },
+      root_dir = vim.fs.root(0, { "Move.toml" }),
+    })
+  end,
 })
 
 -- TODO: Move to LSP when I have the time
@@ -40,3 +52,17 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
   pattern = { "*.tex" },
   command = "TexlabBuild",
 })
+
+-- vim.api.nvim_create_autocmd({ "BufEnter" }, {
+--   pattern = { "*" },
+--   callback = function()
+--     display_filename_with_modified_and_tab()
+--   end,
+-- })
+
+-- vim.api.nvim_create_autocmd({ "BufLeave" }, {
+--   pattern = { "*.lua" },
+--   callback = function()
+--     print(vim.api.nvim_buf_get_option(vim.api.nvim_get_current_buf(), "modified"))
+--   end,
+-- })

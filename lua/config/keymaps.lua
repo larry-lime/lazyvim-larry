@@ -51,12 +51,9 @@ map("n", "😚", "<CMD>qa<CR>", opts)
 -- Rename tab
 map("n", "<leader>br", ":BufferLineTabRename ", opts)
 
--- Cycle through tabs
-map("n", "<M-[>", "<CMD>BufferlineCyclePrev<CR>", opts)
-map("n", "<M-]>", "<CMD>BufferlineCycleNext<CR>", opts)
-
-map("n", "<M-[>", "<CMD>tabprevious<CR>", opts)
-map("n", "<M-]>", "<CMD>tabnext<CR>", opts)
+-- Rename tab
+map("n", "<M-k>", "<CMD>tabprevious<CR>", opts)
+map("n", "<M-j>", "<CMD>tabnext<CR>", opts)
 
 -- Make saves silent
 map("n", "<C-s>", "<CMD>silent w<CR>", opts)
@@ -65,4 +62,7 @@ map("n", "<C-s>", "<CMD>silent w<CR>", opts)
 map("n", "<leader>y", "^vg_y", opts)
 
 -- Get Information
-map("n", "<C-i>", "<CMD>lua Display_filename_with_modified_and_tab()<CR>", opts)
+-- map("n", "<C-i>", "<CMD>lua Display_filename_with_modified_and_tab()<CR>", opts)
+
+-- map("n", "<leader>R", "<CMD>e%<CR>", opts)
+map("n", "<leader>uu", "<cmd>TransferUpload<cr>", opts)

@@ -1,6 +1,14 @@
 return {
   "akinsho/bufferline.nvim",
-  enabled = true,
+  enabled = false,
+  keys = {
+    { "[b", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
+    { "]b", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
+    { "<M-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
+    { "<M-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
+    { "[B", "<cmd>BufferLineMovePrev<cr>", desc = "Move buffer prev" },
+    { "]B", "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer next" },
+  },
   opts = {
     options = {
       mode = "buffers", -- set to "tabs" to only show tabpages instead

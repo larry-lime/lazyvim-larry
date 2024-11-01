@@ -3,7 +3,7 @@
 -- Add any additional autocmds here
 -- Disable autoformat for lua files
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "typescriptreact", "typescript", "python" },
+  pattern = { "typescriptreact", "typescript", "python", "rust", "markdown", "yaml" },
   callback = function()
     vim.b.autoformat = false
   end,

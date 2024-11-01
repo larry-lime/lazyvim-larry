@@ -9,14 +9,14 @@ local options = {
   lazyredraw = false,
   showtabline = 0,
   background = "dark",
-  -- winbar = "%=%m %t [%{tabpagenr()}]",
+  -- winbar = "%m %t [%{tabpagenr()}]",
 }
 
 -- Hide statusline
-vim.api.nvim_set_hl(0, "Statusline", { link = "Normal" })
-vim.api.nvim_set_hl(0, "StatuslineNC", { link = "Normal" })
-local str = string.rep("-", vim.api.nvim_win_get_width(0))
-vim.opt.statusline = "%=" .. str .. "%="
+-- vim.api.nvim_set_hl(0, "Statusline", { link = "Normal" })
+-- vim.api.nvim_set_hl(0, "StatuslineNC", { link = "Normal" })
+-- local str = string.rep("-", vim.api.nvim_win_get_width(0))
+-- vim.opt.statusline = "%=" .. str .. "%="
 
 -- Set Custom Treesitter Parser
 

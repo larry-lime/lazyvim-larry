@@ -35,7 +35,8 @@ return {
     enabled = true,
     opts = {
       style = "moon", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
-      light_style = "day", -- The theme is used when the background is set to light
+      terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+      cache = false, -- When set to true, the theme will be cached for better performance
       styles = {
         -- Style to be applied to different syntax groups
         -- Value is any valid attr-list value for `:help nvim_set_hl`
@@ -67,7 +68,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight", -- tokyonight, gruvbox, catppuccin, rose-pine
+      colorscheme = "tokyonight", -- tokyonight, gruvbox, catppuccin, rose-pine, catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mochaa
     },
   },
 }

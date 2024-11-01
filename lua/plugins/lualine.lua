@@ -1,7 +1,7 @@
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  enabled = false,
+  enabled = true,
   opts = {
     options = {
       icons_enabled = true,
@@ -13,5 +13,18 @@ return {
       always_divide_middle = true,
       globalstatus = true,
     },
+    sections = {
+      lualine_z = { "tabs" },
+    },
+    -- winbar = {},
+    --
+    -- inactive_winbar = {
+    --   lualine_a = {},
+    --   lualine_b = {},
+    --   lualine_c = {},
+    --   lualine_x = {},
+    --   lualine_y = {},
+    --   lualine_z = {},
+    -- },
   },
 }

@@ -1,5 +1,5 @@
 return {
-  { "rcarriga/nvim-notify", enabled = false },
+  { "rcarriga/nvim-notify", enabled = true },
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   { "RRethy/vim-illuminate", enabled = false },
   { "folke/trouble.nvim", enabled = true },

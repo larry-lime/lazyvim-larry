@@ -9,7 +9,9 @@ return {
   },
   {
     "tiagovla/scope.nvim",
-    enabled = false,
+    lazy = true,
+    event = "LazyFile",
+    enabled = true,
     opts = {},
   },
   { "L3MON4D3/LuaSnip", enabled = true },

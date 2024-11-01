@@ -6,17 +6,25 @@ return {
   end,
   enabled = true,
   opts = {
+    routes = {
+      -- HACK: Suppressing errors of a certain type
+      {
+        filter = {
+          event = "notify",
+          find = "Request textDocument/inlayHint failed",
+        },
+        opts = { skip = true },
+      },
+    },
     presets = {
       -- you can enable a preset by setting it to true, or a table that will override the preset config
       -- you can also add custom presets that you can enable/disable with enabled=true
-      bottom_search = true, -- use a classic bottom cmdline for search
+      bottom_search = false, -- use a classic bottom cmdline for search
       command_palette = false, -- position the cmdline and popupmenu together
       long_message_to_split = false, -- long messages will be sent to a split
       inc_rename = false, -- enables an input dialog for inc-rename.nvim
     },
     messages = {
-      -- NOTE: If you enable messages, then the cmdline is enabled automatically.
-      -- This is a current Neovim limitation.
       enabled = true, -- enables the Noice messages UI
       view = "notify", -- default view for messages
       view_error = "notify", -- view for errors

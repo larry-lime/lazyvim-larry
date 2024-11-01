@@ -2,6 +2,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      servers = {},
       diagnostics = {
         virtual_text = false,
         float = {
@@ -17,6 +18,9 @@ return {
   },
   {
     "williamboman/mason.nvim",
-    opts = { ui = { border = "rounded" } },
+    opts = {
+      ensure_installed = {},
+      ui = { border = "rounded" },
+    },
   },
 }

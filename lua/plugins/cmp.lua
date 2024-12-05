@@ -28,11 +28,11 @@ return {
   opts = function(_, opts)
     local luasnip = require("luasnip")
     local cmp = require("cmp")
-    -- table.insert(opts.sources, 1, {
-    --   name = "supermaven",
-    --   group_index = 1,
-    --   priority = 10000,
-    -- })
+    table.insert(opts.sources, 1, {
+      name = "supermaven",
+      group_index = 1,
+      priority = 10000,
+    })
     opts.preselect = cmp.PreselectMode.None
     opts.window = {
       completion = cmp.config.window.bordered(),

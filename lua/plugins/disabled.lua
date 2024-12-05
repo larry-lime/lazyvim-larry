@@ -10,4 +10,6 @@ return {
   { "ahmedkhalf/project.nvim", enabled = false },
   { "SmiteshP/nvim-navic", enabled = false },
   { "echasnovski/mini.indentscope", enabled = true },
+  { "CopilotC-Nvim/CopilotChat.nvim", enabled = false },
+  { "folke/snacks.nvim", opts = { dashboard = { enabled = false } } },
 }

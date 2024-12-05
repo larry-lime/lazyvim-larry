@@ -8,6 +8,14 @@ return {
     enabled = false,
   },
   {
+    "xemptuous/sqlua.nvim",
+    lazy = true,
+    cmd = "SQLua",
+    config = function()
+      require("sqlua").setup()
+    end,
+  },
+  {
     "tiagovla/scope.nvim",
     lazy = true,
     event = "LazyFile",
@@ -16,7 +24,14 @@ return {
   },
   { "L3MON4D3/LuaSnip", enabled = true },
   {
-    "folke/trouble.nvim",
-    event = "BufRead",
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    lazy = false,
+    config = function()
+      require("refactoring").setup()
+    end,
   },
 }

@@ -24,6 +24,11 @@ return {
       long_message_to_split = false, -- long messages will be sent to a split
       inc_rename = false, -- enables an input dialog for inc-rename.nvim
     },
+    cmdline = {
+      enabled = true, -- enables the Noice cmdline UI
+      view = "cmdline_popup", -- view for rendering the cmdline. Change to `cmdline` to get a classic cmdline at the bottom
+      opts = {}, -- global options for the cmdline. See section on views
+    },
     messages = {
       enabled = true, -- enables the Noice messages UI
       view = "notify", -- default view for messages

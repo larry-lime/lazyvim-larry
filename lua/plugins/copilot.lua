@@ -3,7 +3,7 @@ return {
   cmd = "Copilot",
   build = ":Copilot auth",
   lazy = true,
-  enabled = true,
+  enabled = false,
   opts = {
     suggestion = { enabled = false },
     panel = { enabled = false },

@@ -48,9 +48,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 --   command = "TSDisable highlight | LspStop",
 -- })
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "*.tex" },
-  command = "TexlabBuild",
+  command = "set wrap",
 })
 
 -- vim.api.nvim_create_autocmd({ "BufEnter" }, {

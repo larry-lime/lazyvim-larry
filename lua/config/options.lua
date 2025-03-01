@@ -9,7 +9,7 @@ local options = {
   lazyredraw = false,
   showtabline = 0,
   background = "dark",
-  -- winbar = "%m %t [%{tabpagenr()}]",
+  winbar = "%m %t [%{tabpagenr()}]",
 }
 
 -- Hide statusline

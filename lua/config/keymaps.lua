@@ -17,7 +17,7 @@ map("n", "<leader>A", "GVgg", opts)
 
 -- Buffer and tab navigation
 map("n", "<C-x>", "<CMD>close<CR>", opts)
-map("n", "😑", "<CMD>close<CR>", opts)
+map("n", "<D-x>", "<CMD>close<CR>", opts)
 
 -- TODO: Disable todo comments
 map("n", "[t", "<CMD>tabprevious<CR>", opts)
@@ -42,8 +42,8 @@ map("v", "<M-Down>", "<CMD>m '>+1<CR>gv=gv", { desc = "Move down" })
 map("v", "<M-Up>", "<CMD>m '<-2<CR>gv=gv", { desc = "Move up" })
 
 -- CMD+/ to comment
-map("v", "🗂️", "<CMD>normal gcc<CR>", opts)
-map("n", "🗂️", "<CMD>normal gcc<CR>", opts)
+map("v", "<D-/>", "<CMD>normal gcc<CR>", opts)
+map("n", "<D-/>", "<CMD>normal gcc<CR>", opts)
 
 -- CMD+q to quit
 map("n", "😚", "<CMD>qa<CR>", opts)

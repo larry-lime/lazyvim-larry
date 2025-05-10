@@ -6,6 +6,7 @@ return {
     name = "catppuccin",
     opts = {
       -- latte, frappe, macchiato, mocha
+      transparent_background = false,
       -- flavour = "latte",
       background = { -- :h background
         light = "latte",
@@ -28,7 +29,6 @@ return {
       },
     },
   },
-  { "ellisonleao/gruvbox.nvim", event = "VeryLazy", enabled = true },
   {
     "folke/tokyonight.nvim",
     event = "VeryLazy",
@@ -48,27 +48,9 @@ return {
     },
   },
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    event = "VeryLazy",
-    enabled = true,
-    opts = {
-      variant = "auto", -- auto, main, moon, or dawn
-      dark_variant = "moon", -- main, moon, or dawn
-      highlight_groups = {
-        ["@comment"] = { italic = false },
-        ["@variable"] = { italic = false },
-        ["@function"] = { italic = false },
-        ["@conditional"] = { italic = true },
-        ["@keyword"] = { italic = true },
-        ["@class"] = { italic = false },
-      },
-    },
-  },
-  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight", -- tokyonight, gruvbox, catppuccin, rose-pine, catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mochaa
+      colorscheme = "catppuccin", -- tokyonight, gruvbox, catppuccin, rose-pine, catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mochaa
     },
   },
 }

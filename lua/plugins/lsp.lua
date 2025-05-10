@@ -4,6 +4,7 @@ return {
     opts = {
       inlay_hints = { enabled = false },
       servers = {},
+      autoformat = false,
       diagnostics = {
         virtual_text = false,
         float = {

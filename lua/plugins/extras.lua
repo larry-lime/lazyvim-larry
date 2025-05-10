@@ -23,15 +23,4 @@ return {
     opts = {},
   },
   { "L3MON4D3/LuaSnip", enabled = true },
-  {
-    "ThePrimeagen/refactoring.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    lazy = false,
-    config = function()
-      require("refactoring").setup()
-    end,
-  },
 }

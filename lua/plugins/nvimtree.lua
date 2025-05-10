@@ -10,7 +10,7 @@ return {
       desc = "Nvim Tree Toggle",
     },
     {
-      "🤗", -- Command+s
+      "<D-s>", -- Command+s
       function()
         require("nvim-tree.api").tree.toggle({ find_file = false, update_root = false, focus = true })
       end,

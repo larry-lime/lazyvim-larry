@@ -2,6 +2,7 @@ local leet_arg = "leetcode.nvim"
 
 return {
   "kawre/leetcode.nvim",
+  enabled = false,
   build = ":TSUpdate html",
   lazy = leet_arg ~= vim.fn.argv()[1],
   dependencies = {

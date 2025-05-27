@@ -1,38 +1,9 @@
 return {
   "hrsh7th/nvim-cmp",
-  dependencies = {
-    {
-      "supermaven-inc/supermaven-nvim",
-      enabled = true,
-      dependencies = "copilot.lua",
-      config = function()
-        require("supermaven-nvim").setup({
-          keymaps = {
-            accept_suggestion = "<C-g>",
-            clear_suggestion = "<C-]>",
-            accept_word = "<C-j>",
-          },
-          ignore_filetypes = { markdown = true },
-          color = {
-            -- suggestion_color = "#ffffff",
-            cterm = 244,
-          },
-          log_level = "info", -- set to "off" to disable logging completely
-          disable_inline_completion = false, -- disables inline completion for use with cmp
-          disable_keymaps = false, -- disables built in keymaps for more manual control
-        })
-      end,
-    },
-  },
   ---@param opts cmp.ConfigSchema
   opts = function(_, opts)
     local luasnip = require("luasnip")
     local cmp = require("cmp")
-    table.insert(opts.sources, 1, {
-      name = "supermaven",
-      group_index = 1,
-      priority = 10000,
-    })
     opts.preselect = cmp.PreselectMode.None
     opts.window = {
       completion = cmp.config.window.bordered(),

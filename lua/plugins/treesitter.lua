@@ -1,4 +1,4 @@
-local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
+-- local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
 -- local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 return {
   "nvim-treesitter/nvim-treesitter",
@@ -17,20 +17,20 @@ return {
   -- }
   -- end,
   keys = {
-    {
-      ",",
-      function()
-        ts_repeat_move.repeat_last_move_next()
-      end,
-      mode = { "n", "x", "o" },
-    },
-    {
-      ";",
-      function()
-        ts_repeat_move.repeat_last_move_next()
-      end,
-      mode = { "n", "x", "o" },
-    },
+    -- {
+    --   ",",
+    --   function()
+    --     ts_repeat_move.repeat_last_move_next()
+    --   end,
+    --   mode = { "n", "x", "o" },
+    -- },
+    -- {
+    --   ";",
+    --   function()
+    --     ts_repeat_move.repeat_last_move_next()
+    --   end,
+    --   mode = { "n", "x", "o" },
+    -- },
   },
   opts = {
     textobjects = {

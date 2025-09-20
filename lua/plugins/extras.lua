@@ -1,10 +1,7 @@
 return {
   { "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
   {
-    "echasnovski/mini.ai",
-    event = function()
-      return "BufReadPre"
-    end,
+    "nvim-mini/mini.ai",
     enabled = false,
   },
   {

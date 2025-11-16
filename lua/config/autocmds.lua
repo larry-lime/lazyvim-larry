@@ -53,6 +53,26 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   command = "set wrap",
 })
 
+-- Auto-reload files when changed externally
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
+  pattern = "*",
+  command = "checktime",
+})
+
+-- Check for file changes on cursor hold
+vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+  pattern = "*",
+  command = "checktime",
+})
+
+-- Optional: Show notification when file is reloaded
+vim.api.nvim_create_autocmd("FileChangedShellPost", {
+  pattern = "*",
+  callback = function()
+    vim.notify("File reloaded", vim.log.levels.INFO)
+  end,
+})
+
 -- vim.api.nvim_create_autocmd({ "BufEnter" }, {
 --   pattern = { "*" },
 --   callback = function()

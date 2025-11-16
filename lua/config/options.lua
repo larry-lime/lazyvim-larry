@@ -10,6 +10,7 @@ local options = {
   showtabline = 0,
   background = "dark",
   winbar = "%m %t [%{tabpagenr()}]",
+  autoread = true, -- Auto-reload files changed outside of Neovim
 }
 
 -- Hide statusline

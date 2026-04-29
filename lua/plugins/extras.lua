@@ -20,4 +20,8 @@ return {
     opts = {},
   },
   { "L3MON4D3/LuaSnip", enabled = true },
+  {
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = { "lewis6991/async.nvim" },
+  },
 }

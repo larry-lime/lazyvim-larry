@@ -73,6 +73,12 @@ vim.api.nvim_create_autocmd("FileChangedShellPost", {
   end,
 })
 
+vim.filetype.add({
+  pattern = {
+    [".*/nginx/sites%-available/.*"] = "nginx",
+    [".*/nginx/sites%-enabled/.*"] = "nginx",
+  },
+})
 -- vim.api.nvim_create_autocmd({ "BufEnter" }, {
 --   pattern = { "*" },
 --   callback = function()

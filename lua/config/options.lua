@@ -8,20 +8,9 @@ local options = {
   laststatus = 0,
   lazyredraw = false,
   showtabline = 0,
-  background = "dark",
   winbar = "%m %t [%{tabpagenr()}]",
   autoread = true, -- Auto-reload files changed outside of Neovim
 }
-
--- Hide statusline
--- vim.api.nvim_set_hl(0, "Statusline", { link = "Normal" })
--- vim.api.nvim_set_hl(0, "StatuslineNC", { link = "Normal" })
--- local str = string.rep("-", vim.api.nvim_win_get_width(0))
--- vim.opt.statusline = "%=" .. str .. "%="
-
--- Set Custom Treesitter Parser
-
--- vim.opt.shortmess:append("c")
 
 for k, v in pairs(options) do
   vim.opt[k] = v
